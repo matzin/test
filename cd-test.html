@@ -1,0 +1,23 @@
+<html>
+<head>
+<title> The simplest HTML example
+</title>
+<script>
+function receiveMessage(event)
+{
+  //var origin = event.origin || event.originalEvent.origin; // For Chrome, the origin property is in the event.originalEvent object.
+  //if (origin !== "http://example.org:8080")
+  //  return;
+
+  alert("Message");
+}
+window.onload = function () {
+	window.addEventListener("message", receiveMessage, false);
+	document.getElementsByTagName("h1")[0].textContent = "Configured!";
+}
+</script>
+</head>
+<body>
+<h1> This is  an HTML Page </h1>
+</body>
+</html>
